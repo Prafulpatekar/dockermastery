@@ -1,0 +1,16 @@
+To Run a container
+//TODO: docker container run -p 80:80 -d nginx  
+//FIX:--publish or -p is to expose a port local(80):image(80)
+//FIX:--detach or -d is to detach from container to run it in background
+
+To Start and stop container
+//TODO: docker start <containerId>
+//TODO: docker stop <containerId>
+
+To list all the containers
+//TODO: docker container ls
+            or
+//TODO: docker ps
+            or 
+//TODO: docker ps -a
+
