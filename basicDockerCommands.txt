@@ -1,5 +1,5 @@
 To Run a container
-//TODO: docker container run -p 80:80 -d nginx  
+//TODO: docker container run --name nginx -p 80:80 -d nginx  
 //FIX:--publish or -p is to expose a port local(80):image(80)
 //FIX:--detach or -d is to detach from container to run it in background
 
@@ -14,3 +14,24 @@ To list all the containers
             or 
 //TODO: docker ps -a
 
+To List Port of container
+//TODO: docker container port nginx
+80/tcp -> 0.0.0.0:80
+
+//TODO: docker container inspect --format '{{ .NetworkSettings.IPAddress }}' nginx
+172.17.0.2
+
+docker network ls
+docker network inspect bridge
+docker network create my_network
+docker container run --name newNginx -d --network my_network nginx
+
+docker history nginx
+
+docker image tag nginx prafulcoder/nginx:new
+
+docker login
+
+docker logout
+
+docker image push prafulcoder/nginx:new 
